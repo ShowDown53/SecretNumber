@@ -7,7 +7,7 @@ def main():
     secret = random.randint(1, 20)
 
     while True:
-        guess = int(raw_input("Ugani skrito število med 1 in 20: "))
+        guess = int(raw_input("Uganite skrito število med 1 in 20: "))
 
         if secret == guess:
             print "Čestitam, '%s' je skrito število! Nagrado dobite pri izhodu." % secret
