@@ -1,11 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-secret = int(13)
+import random
 
-guess = int(raw_input("Ugani skrito število med 1 in 20:"))
+def main():
+    secret = random.randint(1, 20)
 
-if secret == guess:
-    print "Čestitam, pravilno ste uganili skrito število! Nagrado dobite pri izhodu."
-else:
-    print "Žal niste uganili skrite številke, poskusite ponovno."
+    while True:
+        guess = int(raw_input("Ugani skrito število med 1 in 20: "))
+
+        if secret == guess:
+            print "Čestitam, '%s' je skrito število! Nagrado dobite pri izhodu." % secret
+            break
+        else:
+            print "Žal %s ni skrito število, poskusite ponovno." % guess
+
+if __name__ == "__main__":
+    main()
